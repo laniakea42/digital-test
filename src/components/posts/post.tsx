@@ -12,19 +12,28 @@ import Modal from "../modal/modal";
 
 interface Props {
   src: string;
+  img_2x: string;
   tags: string;
   title: string;
   autor: string;
   date: string;
   views: string;
   text: string;
-  key: number;
 }
 
-const Post = ({ key, src, tags, title, autor, date, views, text }: Props) => {
+const Post = ({
+  src,
+  img_2x,
+  tags,
+  title,
+  autor,
+  date,
+  views,
+  text,
+}: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handlePostClick = (key: number) => {
+  const handlePostClick = () => {
     setIsModalOpen(true);
   };
 
@@ -42,9 +51,9 @@ const Post = ({ key, src, tags, title, autor, date, views, text }: Props) => {
 
   return (
     <>
-      <PostContainer onClick={() => handlePostClick(key)}>
+      <PostContainer onClick={() => handlePostClick()}>
         <PostImg>
-          <img src={src} alt="" />
+          <img src={src} alt="" srcSet={`${img_2x} 2x`} />
         </PostImg>
         <PostTag>{tags}</PostTag>
         <PostTitle>{title}</PostTitle>

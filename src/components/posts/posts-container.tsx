@@ -52,6 +52,7 @@ const Posts = ({ filterString }: Props) => {
                 date={post.date}
                 views={post.views}
                 text={post.text}
+                img_2x={post.img_2x}
               ></Post>
             ))}
           </PostsGrid>
@@ -66,6 +67,7 @@ const Posts = ({ filterString }: Props) => {
           <Post
             key={key}
             src={post.img}
+            img_2x={post.img_2x}
             tags={post.tags}
             title={post.title}
             autor={post.autor}
