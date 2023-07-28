@@ -19,7 +19,6 @@ export const HeaderWrapper = styled.header`
   & + div {
     padding-top: 82px;
   }
-
   @media (min-width: 768px) {
     & + div {
       padding-top: 146px;
