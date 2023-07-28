@@ -20,6 +20,7 @@ import cross from "./img/cross.svg";
 
 interface Props {
   src: string;
+  img_2x: string;
   tags: string;
   title: string;
   autor: string;
@@ -32,6 +33,7 @@ interface Props {
 const Modal = ({
   src,
   tags,
+  img_2x,
   title,
   autor,
   date,
@@ -51,7 +53,7 @@ const Modal = ({
         </ModalHeading>
         <PostModalGrid>
           <PostImg>
-            <img src={src} alt="" />
+            <img src={src} alt="" srcSet={`${img_2x} 2x`} />
           </PostImg>
 
           <PostModalAside>

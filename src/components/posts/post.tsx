@@ -70,6 +70,7 @@ const Post = ({
       {isModalOpen && (
         <Modal
           src={src}
+          img_2x={img_2x}
           tags={tags}
           title={title}
           autor={autor}
